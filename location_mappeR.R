@@ -224,7 +224,7 @@ for(i in 1:length(ll$Photo_pt_i)){
         label.i <- ll$Photo_pt_i[i]
         dbt.i <- as.data.frame(subset(ll, ll$Photo_pt_i == label.i))#subset this way to avoid mismatch of pts to locs
         G1 <- G + geom_point(aes(x=x, y=y ),data=dbt.i, color="red", size=1.8) + 
-                xlim(112.9, 113.24)+theme(plot.margin=unit(c(0,0,0,0),"mm")) +
+                xlim(112.9, 113.24)+ #theme(plot.margin=unit(c(0,0,0,0),"mm")) +
                 annotate("text", x = 113.12, y = -25.6, label = label.i, size = 2)+
                 scaleBar(lon = 112.95, lat = -26.1, distanceLon = 5, distanceLat = 1, 
                          distanceLegend = 3, dist.unit = "km", arrow.length = 5, arrow.distance = 5,
